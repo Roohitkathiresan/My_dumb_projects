@@ -1,18 +1,17 @@
-import wikipedia
+import requests
+from bs4 import BeautifulSoup
 
-def fetch_wikipedia(query, sentences=2):
+def fetch_ncert_online(subject, class_num, chapter_name):
     try:
-        return wikipedia.summary(query, sentences=sentences)
-    except wikipedia.exceptions.DisambiguationError as e:
-        return f"Disambiguation error: {e}"
-    except wikipedia.exceptions.PageError:
-        return "Wikipedia page not found."
-    except Exception as e:
-        return f"Error: {e}"
-
-def fetch_ncert(topic):
-    ncert_data = {
-        "Newton's laws": "Newton's laws describe motion: 1) inertia, 2) F=ma, 3) action-reaction.",
-        "Periodic table": "Elements are arranged by atomic number in the periodic table."
-    }
-    return ncert_data.get(topic, "")
+        url = f"https://ncert.nic.in/textbook.php?subject={subject}&class={class_num}&chapter={chapter_name}"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        paragraphs = [p.get_text() for p in soup.find_all('p')]
+        content = "\n".join(paragraphs).strip()
+        if not content:
+            return "No content found for this chapter."
+        return content
+    except requests.RequestException:
+        return "Could not fetch NCERT chapter online."
