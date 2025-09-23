@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Quotient and remainder"/>
+        <attribute name="authors" value="roohit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-22 10:28:45 PM"/>
+        <attribute name="created" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIwOzA1OjA2OjQxIFBNOzM0MTk="/>
+        <attribute name="edited" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIyOzEwOjI4OjQ1IFBNOzI7MzUzNA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number1, number2, remainder, quotient" type="Real" array="False" size=""/>
+            <input variable="number1"/>
+            <input variable="number2"/>
+            <if expression="number2=0">
+                <then>
+                    <output expression="&quot;not defined&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="quotient" expression="number1/number2"/>
+            <assign variable="remainder" expression="number1%number2"/>
+            <output expression="&quot;quotient is &quot; &amp; quotient" newline="True"/>
+            <output expression="&quot;remainder is &quot; &amp; remainder" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

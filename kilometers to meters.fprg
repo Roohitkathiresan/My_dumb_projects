@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="kilometers to meters"/>
+        <attribute name="authors" value="roohit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-22 09:17:47 PM"/>
+        <attribute name="created" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIwOzA1OjAyOjI4IFBNOzM0MjA="/>
+        <attribute name="edited" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIyOzA5OjE3OjQ3IFBNOzI7MzU0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kilometers, meters, miles" type="Real" array="False" size=""/>
+            <input variable="kilometers"/>
+            <assign variable="meters" expression="kilometers*1000"/>
+            <assign variable="miles" expression="kilometers*0.621"/>
+            <output expression="&quot;the number of meters is&quot; &amp; meters" newline="True"/>
+            <output expression="&quot;the number of miles is&quot; &amp; miles" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

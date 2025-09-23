@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fahreinheit to celcius"/>
+        <attribute name="authors" value="roohit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-20 05:02:26 PM"/>
+        <attribute name="created" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIwOzA0OjQzOjQ0IFBNOzM0MjI="/>
+        <attribute name="edited" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIwOzA1OjAyOjI2IFBNOzE7MzUyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="celcius, fahreinheit" type="Real" array="False" size=""/>
+            <input variable="fahreinheit"/>
+            <assign variable="celcius" expression="(fahreinheit-32)/1.8"/>
+            <output expression="celcius" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

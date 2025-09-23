@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="biggest of 3"/>
+        <attribute name="authors" value="roohit"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-22 09:12:48 PM"/>
+        <attribute name="created" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIwOzA0OjM0OjA2IFBNOzM0MjA="/>
+        <attribute name="edited" value="QUJISUpJVEggU0hBUk1BO0RFU0tUT1AtTEtLUTZCSjsyMDI1LTA5LTIyOzA5OjEyOjQ4IFBNOzQ7MzU0MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number1, number2, number3" type="Integer" array="False" size=""/>
+            <input variable="number1"/>
+            <input variable="number2"/>
+            <input variable="number3"/>
+            <if expression="number1&gt;number2 and number1&gt;number3">
+                <then>
+                    <output expression="&quot;number1 is big&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number2&gt;number3 and number2&gt;number1">
+                <then>
+                    <output expression="&quot;number2 is big&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number3&gt;number2 and number1&lt;number3">
+                <then>
+                    <output expression="&quot;number3 is big&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number1=number2 and number2=number3">
+                <then>
+                    <output expression="&quot;all are equal&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number1=number2 and number2&gt;number3">
+                <then>
+                    <output expression="&quot;n1 and n2 are the greatest numbers and equal&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number2=number3 and number3&gt;number1">
+                <then>
+                    <output expression="&quot;n3 and n2 are the greatest numbers and equal&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="number3=number1 and number1&gt;number2">
+                <then>
+                    <output expression="&quot;n1 and n3 are the greatest numbers and equal&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
